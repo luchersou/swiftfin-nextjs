@@ -1,0 +1,134 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id          String  @id @default(uuid())
+  firstName   String
+  lastName    String?
+  email       String  @unique
+  clerkUserId String  @unique
+  imageUrl    String?
+
+  accounts      Account[]
+  categories    Category[]
+  transactions  Transaction[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
+
+model Account {
+  id             String      @id @default(uuid())
+  name           String
+  type           AccountType
+  currency       Currency    @default(USD)
+  balance        Decimal     @default(0) 
+  isActive       Boolean     @default(true)
+  order          Int?       
+  
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  parentId  String?
+  parent    Account?  @relation("AccountTree", fields: [parentId], references: [id], onDelete: Restrict)
+  children  Account[] @relation("AccountTree")
+  
+  transactions Transaction[]
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@index([userId])
+  @@index([userId, type])
+  @@index([userId, isActive])
+
+  @@map("accounts")
+}
+
+model Transaction {
+  id          String          @id @default(uuid())
+  amount      Decimal
+  description String
+  date        DateTime
+  type        TransactionType
+  notes       String?      
+  
+  accountId String
+  account   Account @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  
+  categoryId String?
+  category   Category? @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+   
+  @@index([userId, accountId])            
+  @@index([userId, categoryId])            
+  @@index([userId, type])                 
+  @@index([userId, amount])                
+  @@index([userId, createdAt])            
+
+  @@map("transactions")
+}
+
+model Category {
+  id       String  @id @default(uuid())
+  name     String
+  isActive Boolean @default(true)
+  
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  transactions Transaction[]
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@unique([userId, name])
+  @@index([userId])
+  @@index([userId, isActive])
+
+  @@map("categories")
+}
+
+model ExchangeRate {
+  id        String   @id @default(uuid())
+  from      Currency
+  to        Currency
+  rate      Decimal  @db.Decimal(18, 6)
+  date      DateTime @default(now())
+  createdAt DateTime @default(now())
+  
+  @@unique([from, to, date])
+  @@index([from, to])
+  @@index([date])
+}
+
+enum TransactionType {
+  INCOME
+  EXPENSE
+}
+
+enum AccountType {
+  CHECKING
+  SAVINGS
+  CREDIT
+  INVESTMENT
+}
+
+enum Currency {
+  USD
+  EUR
+}
