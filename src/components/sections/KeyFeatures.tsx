@@ -45,7 +45,7 @@ export function KeyFeatures() {
           </BentoGrid>
           <div className="mt-12 flex justify-center">
             <Link
-              href="/start-trial" 
+              href="/auth/sign-in" 
               className={`flex items-center space-x-2 px-8 py-3 text-lg font-semibold rounded-full 
                         bg-emerald-500 transition-all duration-300 shadow-lg 
                         hover:bg-emerald-400 hover:scale-[1.02]`}
