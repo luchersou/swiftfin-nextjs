@@ -118,7 +118,7 @@ export const Hero = () => {
           className="absolute left-0 top-[15%] rotate-[-6deg] z-30 hover:z-50 transition-all hover:scale-105"
         >
           <CardContainer>
-            <CardBody className="bg-slate-900/70 backdrop-blur-3xl border border-slate-700/50 rounded-2xl w-[280px] shadow-5xl shadow-slate-900/50 overflow-hidden">
+            <CardBody className="bg-slate-900/70 backdrop-blur-3xl border border-slate-700/50 rounded-2xl w-[280px] h-[350] shadow-5xl shadow-slate-900/50 overflow-hidden">
               <CardItem translateZ="50">
                 <div className="px-3 py-2 flex items-center gap-2 border-b border-slate-700/30 bg-slate-800/60">
                   <div className="flex gap-1.5">
@@ -181,10 +181,10 @@ export const Hero = () => {
           initial={{ opacity: 0, x: 50, rotate: 8 }}
           animate={{ opacity: 1, x: 0, rotate: 4 }}
           transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
-          className="absolute right-[5%] top-[25%] rotate-[4deg] z-20 hover:z-50 transition-all hover:scale-105"
+          className="absolute right-[-5%] top-[25%] rotate-[6deg] z-20 hover:z-50 transition-all hover:scale-105"
         >
           <CardContainer>
-            <CardBody className="bg-slate-900/70 backdrop-blur-3xl border border-slate-700/50 rounded-2xl w-[280px] shadow-5xl shadow-slate-900/50 overflow-hidden">
+            <CardBody className="bg-slate-900/70 backdrop-blur-3xl border border-slate-700/50 rounded-2xl w-[280px] h-[350] shadow-5xl shadow-slate-900/50 overflow-hidden">
               <CardItem translateZ="50">
                 <div className="px-3 py-2 flex items-center gap-2 border-b border-slate-700/30 bg-slate-800/60">
                   <div className="flex gap-1.5">
@@ -241,10 +241,10 @@ export const Hero = () => {
           initial={{ opacity: 0, x: 50, rotate: -6 }}
           animate={{ opacity: 1, x: 0, rotate: -3 }}
           transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-          className="absolute left-[25%] bottom-[5%] rotate-[-6deg] z-10 hover:z-50 transition-all hover:scale-105"
+          className="absolute left-[25%] bottom-[-5%] rotate-[6deg] z-10 hover:z-50 transition-all hover:scale-105"
         >
           <CardContainer>
-            <CardBody className="bg-slate-900/70 backdrop-blur-3xl border border-slate-700/50 rounded-2xl w-[260px] shadow-5xl shadow-slate-900/50 overflow-hidden">
+            <CardBody className="bg-slate-900/70 backdrop-blur-3xl border border-slate-700/50 rounded-2xl w-[260px] h-[350] shadow-5xl shadow-slate-900/50 overflow-hidden">
               <CardItem translateZ="50">
                 <div className="px-3 py-2 flex items-center gap-2 border-b border-slate-700/30 bg-slate-800/60">
                   <div className="flex gap-1.5">
