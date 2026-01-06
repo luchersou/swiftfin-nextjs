@@ -68,7 +68,7 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-12 justify-center lg:justify-start"
         >
-        <h1 className="text-sm sm:text-base lg:text-lg xl:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6 pt-25">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4 sm:mb-6 pt-25">
           Financial Intelligence
           <span className="block mt-2 bg-gradient-to-r from-slate-300 via-slate-400 to-slate-200 bg-clip-text text-transparent">
             Meets Simplicity
