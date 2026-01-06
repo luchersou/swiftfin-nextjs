@@ -1,7 +1,7 @@
 "use client";
 
 import { TransactionTableRow } from "@/types/transactions";
-import { TransactionRow } from "./TransactionsColumns";
+import { TransactionRow } from "./TransactionRow";
 import { TransactionsPagination } from "./TransactionsPagination";
 
 import {
