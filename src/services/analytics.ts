@@ -81,23 +81,19 @@ export async function getDashboardSummary( userId: string): Promise<DashboardSum
 export async function getExpenseByCategory(
   userId: string
 ): Promise<ExpenseByCategory[]> {
-  
   const baseCurrency = Currency.USD;
 
   const transactions = await prisma.transaction.findMany({
     where: {
       userId,
       type: TransactionType.EXPENSE,
-      categoryId: {
-        not: null,
-      },
     },
     select: {
       categoryId: true,
       amount: true,
       account: {
         select: {
-          currency: true, 
+          currency: true,
         },
       },
       category: {
@@ -112,10 +108,13 @@ export async function getExpenseByCategory(
     return [];
   }
 
-  const categoryTotals = new Map<string, { name: string; total: number }>();
+  const categoryTotals = new Map<
+    string,
+    { name: string; total: number }
+  >();
 
   for (const transaction of transactions) {
-    const categoryId = transaction.categoryId!;
+    const categoryKey = transaction.categoryId ?? "UNCATEGORIZED";
     const categoryName = transaction.category?.name ?? "--";
 
     const convertedAmount = await convertCurrency(
@@ -124,11 +123,12 @@ export async function getExpenseByCategory(
       baseCurrency
     );
 
-    const current = categoryTotals.get(categoryId);
+    const current = categoryTotals.get(categoryKey);
+
     if (current) {
       current.total += convertedAmount;
     } else {
-      categoryTotals.set(categoryId, {
+      categoryTotals.set(categoryKey, {
         name: categoryName,
         total: convertedAmount,
       });
@@ -143,6 +143,7 @@ export async function getExpenseByCategory(
     }))
     .sort((a, b) => b.total - a.total);
 }
+
 
 export async function getIncomeVsExpense(
   userId: string

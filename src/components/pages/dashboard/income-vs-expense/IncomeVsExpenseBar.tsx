@@ -7,6 +7,7 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
+  CartesianGrid,
   Cell,
 } from "recharts"
 
@@ -36,12 +37,21 @@ export function IncomeVsExpenseBar({
         <CardTitle>Income vs Expense</CardTitle>
       </CardHeader>
 
-      <CardContent className="h-[300px]">
+      <CardContent className="h-[350px]">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={chartData} barSize={48}>
+          <BarChart
+            data={chartData}
+            margin={{ top: 10, right: 16, left: 8, bottom: 0 }}
+          >
+            <CartesianGrid
+              strokeDasharray="3 3"
+              stroke="hsl(var(--chart-grid))"
+              vertical={false}
+            />
+
             <XAxis
               dataKey="label"
-              tick={{ fontSize: 12 }}
+              tick={{ fontSize: 12, fill: "var(--muted-foreground)" }}
               axisLine={false}
               tickLine={false}
             />
@@ -50,6 +60,7 @@ export function IncomeVsExpenseBar({
               tickFormatter={(v: number) =>
                 formatCurrency(v, currency)
               }
+              tick={{ fontSize: 12, fill: "var(--muted-foreground)" }}
               axisLine={false}
               tickLine={false}
               width={80}
@@ -57,22 +68,21 @@ export function IncomeVsExpenseBar({
 
             <Tooltip
               cursor={false}
-              content={
-                <ChartTooltip currency={currency} />
-              }
+              content={<ChartTooltip currency={currency} />}
             />
 
             <Bar
               dataKey="value"
-              radius={[6, 6, 0, 0]}
+              radius={[6, 6, 6, 6]}
+              barSize={100}
             >
               {chartData.map((entry) => (
                 <Cell
                   key={entry.label}
-                  className={
+                  fill={
                     entry.type === "income"
-                      ? "fill-[var(--chart-income)]"
-                      : "fill-[var(--chart-expense)]"
+                      ? "var(--success)"
+                      : "var(--destructive)"
                   }
                 />
               ))}

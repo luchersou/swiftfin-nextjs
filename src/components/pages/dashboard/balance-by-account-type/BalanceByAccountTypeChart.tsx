@@ -65,8 +65,9 @@ export function BalanceByAccountChart({
 
             <Bar
               dataKey="balance"
-              radius={[6, 6, 0, 0]}
+              radius={[6, 6, 6, 6]}
               fill="hsl(var(--chart-bar))"
+              barSize={100}
             />
           </BarChart>
         </ResponsiveContainer>

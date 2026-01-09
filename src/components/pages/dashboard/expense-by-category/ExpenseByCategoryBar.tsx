@@ -36,44 +36,41 @@ export function ExpenseByCategoryBar({
           <BarChart
             data={data}
             layout="vertical"
-            margin={{ top: 8, right: 16, left: 24, bottom: 8 }}
+            margin={{ top: 10, right: 16, left: 16, bottom: 0 }}
           >
             <CartesianGrid
               strokeDasharray="3 3"
+              stroke="hsl(var(--chart-grid))"
               horizontal={false}
-              className="stroke-muted"
             />
 
             <XAxis
               type="number"
-              tickFormatter={(v) =>
-                formatCurrency(v, currency)
-              }
+              tickFormatter={(v) => formatCurrency(v, currency)}
+              tick={{ fontSize: 12, fill: "var(--muted-foreground)" }}
               axisLine={false}
               tickLine={false}
-              className="text-xs text-muted-foreground"
             />
 
             <YAxis
               type="category"
               dataKey="categoryName"
               width={120}
+              tick={{ fontSize: 12, fill: "var(--muted-foreground)" }}
               axisLine={false}
               tickLine={false}
-              className="text-xs text-muted-foreground"
             />
 
             <Tooltip
               cursor={false}
-              content={
-                <ChartTooltip currency={currency} />
-              }
+              content={<ChartTooltip currency={currency} />}
             />
 
             <Bar
               dataKey="total"
-              radius={[0, 6, 6, 0]}
-              fill="var(--chart-1)"
+              radius={[6, 6, 6, 6]}
+              fill="hsl(var(--chart-bar))"
+              barSize={38}
             />
           </BarChart>
         </ResponsiveContainer>
