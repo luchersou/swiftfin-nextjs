@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "prisma/seed.js"  ],
+, "prisma/seed.js", "jest.setup"  ],
   "exclude": ["node_modules"]
 }

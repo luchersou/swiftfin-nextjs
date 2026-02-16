@@ -4,12 +4,12 @@ import { formatCurrency } from "@/lib/utils";
 import { Currency } from "@prisma/client";
 import { TrendingUp, TrendingDown, Receipt, DollarSign } from "lucide-react";
 
-type Props = {
+type AccountDetailsStatsProps = {
   stats: AccountStats;
   currency: Currency;
 };
 
-export function AccountDetailsStats({ stats, currency }: Props) {
+export function AccountDetailsStats({ stats, currency }: AccountDetailsStatsProps) {
   const statsData = [
     {
       label: "Initial Balance",

@@ -4,7 +4,7 @@ import { formatCurrency } from "@/lib/utils";
 import { format } from "date-fns";
 import { Currency } from "@prisma/client";
 
-type Props = {
+type AccountTransactionRowProps = {
   transaction: TransactionListItem;
   currency: Currency;
 };
@@ -22,7 +22,7 @@ const TRANSACTION_CONFIG = {
   },
 } as const;
 
-export function AccountTransactionRow({ transaction, currency }: Props) {
+export function AccountTransactionRow({ transaction, currency }: AccountTransactionRowProps) {
   const config = TRANSACTION_CONFIG[transaction.type];
 
   return (

@@ -50,26 +50,26 @@ export function DeleteAccountDialog({
 
   if (hasChildren) {
     return (
-        <TooltipProvider>
+      <TooltipProvider>
         <Tooltip>
-            <TooltipTrigger asChild>
+          <TooltipTrigger asChild>
             <span className="inline-flex">
-                <Button
-                size="icon"
-                variant="ghost"
-                disabled
-                aria-label="Cannot delete account with sub-accounts"
-                className="cursor-not-allowed opacity-50"
-                >
-                <Trash2 className="h-4 w-4" />
-                </Button>
+              <Button
+              size="icon"
+              variant="ghost"
+              disabled
+              aria-label="Cannot delete account with sub-accounts"
+              className="cursor-not-allowed opacity-50"
+              >
+              <Trash2 className="h-4 w-4" />
+              </Button>
             </span>
-            </TooltipTrigger>
-            <TooltipContent>
-            <p>Cannot delete account with sub-accounts</p>
-            </TooltipContent>
+          </TooltipTrigger>
+          <TooltipContent>
+          <p>Cannot delete account with sub-accounts</p>
+          </TooltipContent>
         </Tooltip>
-        </TooltipProvider>
+      </TooltipProvider>
     );
     }
 

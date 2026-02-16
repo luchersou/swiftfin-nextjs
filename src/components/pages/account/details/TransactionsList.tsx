@@ -3,12 +3,12 @@ import { AccountTransactionRow } from "./TransactionRow";
 import { Currency } from "@prisma/client";
 import { Receipt } from "lucide-react";
 
-type Props = {
+type AccountTransactionsListProps = {
   transactions: TransactionListItem[];
   currency: Currency;
 };
 
-export function AccountTransactionsList({ transactions, currency }: Props) {
+export function AccountTransactionsList({ transactions, currency }: AccountTransactionsListProps) {
   if (transactions.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-8 sm:py-12 px-4 text-center">

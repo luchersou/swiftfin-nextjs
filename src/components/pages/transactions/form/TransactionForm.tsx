@@ -148,8 +148,6 @@ export function TransactionForm({
     }
   }
 
-
-
   const handleDeleteCategory = async (categoryId?: string) => {
     if (!categoryId || categoryId === "none") return
 
@@ -170,7 +168,6 @@ export function TransactionForm({
       setIsCategoryLoading(false)
     }
   }
-
 
   const transactionTypes = Object.values(TransactionType);
 
@@ -356,7 +353,6 @@ export function TransactionForm({
                   </Button>
                 </div>
               ) : (
-                /* SELECT MODE */
                 <div className="flex gap-2">
                   <Select
                     value={field.value ?? undefined}
@@ -403,7 +399,6 @@ export function TransactionForm({
                   )}
                 </div>
               )}
-
               <FormMessage />
             </FormItem>
           )}
