@@ -167,7 +167,6 @@ describe('AccountFormDialog', () => {
         />
       );
 
-      // Simular fechamento do dialog
       rerender(
         <AccountFormDialog
           open={false}
