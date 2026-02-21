@@ -16,8 +16,8 @@ export function DashboardCards({
         <CardContent
           className={`text-2xl font-bold ${
             summary.totalDeposit < 0
-              ? "text-rose-600"
-              : "text-emerald-600"
+              ? "text-destructive-foreground"
+              : "text-success-foreground"
           }`}
         >
           {formatCurrency(summary.totalDeposit, summary.currency)}
@@ -27,7 +27,7 @@ export function DashboardCards({
         <CardHeader>
           <CardTitle>Total Income</CardTitle>
         </CardHeader>
-        <CardContent className="text-2xl font-bold text-emerald-600">
+        <CardContent className="text-2xl font-bold text-success-foreground">
           {formatCurrency(summary.totalIncome, summary.currency)}
         </CardContent>
       </Card>
@@ -36,7 +36,7 @@ export function DashboardCards({
         <CardHeader>
           <CardTitle>Total Expense</CardTitle>
         </CardHeader>
-        <CardContent className="text-2xl font-bold text-rose-600">
+        <CardContent className="text-2xl font-bold text-destructive-foreground">
           {formatCurrency(summary.totalExpense, summary.currency)}
         </CardContent>
       </Card>
@@ -48,8 +48,8 @@ export function DashboardCards({
         <CardContent
           className={`text-2xl font-bold ${
             summary.netChange < 0
-              ? "text-rose-600"
-              : "text-emerald-600"
+              ? "text-destructive-foreground"
+              : "text-success-foreground"
           }`}
         >
           {formatCurrency(summary.netChange, summary.currency)}

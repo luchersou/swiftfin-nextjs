@@ -37,7 +37,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
             className="
               flex h-16 pl-4 shrink-0 items-center gap-2
               border-b border-border
-              bg-background/80 backdrop-blur-md
+              bg-background backdrop-blur-xs
             "
           >
             <SidebarTrigger />

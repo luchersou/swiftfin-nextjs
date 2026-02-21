@@ -78,7 +78,9 @@ export function AccountRow({ account, level }: AccountRowProps) {
             <span className={cn(
               "block tabular-nums",
               isParent ? "text-lg" : "text-base",
-              account.balance >= 0 ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"
+              account.balance >= 0
+                ? "text-success-foreground"
+                : "text-destructive-foreground"
             )}>
               {formatCurrency(account.balance, account.currency)}
             </span>
