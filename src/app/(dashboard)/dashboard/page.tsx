@@ -10,9 +10,18 @@ import { BalanceByAccountTypeServer } from "@/components/pages/dashboard/balance
 import { BalanceByAccountServer } from "@/components/pages/dashboard/balance-by-account-type/BalanceByAccountType.server"
 
 import { getAccountsCount } from "@/services/accounts"
+import { getTransactionsMetadata } from "@/services/transactions"
 
 export default async function DashboardPage() {
   const accountsCount = await getAccountsCount()
+
+  const {
+    totalTransactions,
+    categorizedTransactions,
+  } = await getTransactionsMetadata()
+
+  const hasTransactions = totalTransactions > 0
+  const hasCategories = categorizedTransactions > 0
 
   return (
     <div className="space-y-10">
@@ -33,7 +42,7 @@ export default async function DashboardPage() {
         <>
           <section className="grid gap-6 lg:grid-cols-2">
             <Suspense fallback={<ChartSkeleton />}>
-              <IncomeVsExpenseServer />
+              <BalanceByAccountTypeServer />
             </Suspense>
 
             <Suspense fallback={<ChartSkeleton />}>
@@ -41,15 +50,19 @@ export default async function DashboardPage() {
             </Suspense>
           </section>
 
-          <section className="grid gap-6 lg:grid-cols-2">
-            <Suspense fallback={<ChartSkeleton />}>
-              <BalanceByAccountTypeServer />
-            </Suspense>
+          {hasTransactions && (
+            <section className="grid gap-6 lg:grid-cols-2">
+              <Suspense fallback={<ChartSkeleton />}>
+                <IncomeVsExpenseServer />
+              </Suspense>
 
-            <Suspense fallback={<ChartSkeleton />}>
-              <ExpenseByCategoryServer />
-            </Suspense>
-          </section>
+              {hasCategories && (
+                <Suspense fallback={<ChartSkeleton />}>
+                  <ExpenseByCategoryServer />
+                </Suspense>
+              )}
+            </section>
+          )}
         </>
       )}
     </div>

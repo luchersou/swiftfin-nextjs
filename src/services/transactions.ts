@@ -4,11 +4,9 @@ import { CreateTransactionInput, UpdateTransactionInput } from "@/lib/schemas/tr
 import type { 
   TransactionTableRow, 
   TransactionListParams,
-  TransactionByCategory,
-  TransactionSummary
 } from "@/types/transactions";
-import { cache } from "react";
 import { getUser } from "@/lib/auth/auth";
+import { cache } from "react";
 
 type CreateTransactionServiceInput = CreateTransactionInput & {
   userId: string;
@@ -285,4 +283,26 @@ export const getTransactions = async (
     },
   };
 };
+
+export const getTransactionsMetadata = cache(async () => {
+  const user = await getUser()
+
+  const [total, categorized] = await prisma.$transaction([
+    prisma.transaction.count({
+      where: { userId: user.userId },
+    }),
+    prisma.transaction.count({
+      where: {
+        userId: user.userId,
+        categoryId: { not: null },
+      },
+    }),
+  ])
+
+  return {
+    totalTransactions: total,
+    categorizedTransactions: categorized,
+  }
+})
+
 
