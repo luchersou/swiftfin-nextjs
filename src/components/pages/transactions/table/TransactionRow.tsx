@@ -11,13 +11,13 @@ const TRANSACTION_TYPE_CONFIG = {
   INCOME: {
     label: "Income",
     badgeVariant: "default" as const,
-    textColor: "text-green-600",
+    textColor: "text-[var(--success)]",
     sign: "+",
   },
   EXPENSE: {
     label: "Expense",
     badgeVariant: "destructive" as const,
-    textColor: "text-red-600",
+    textColor: "text-[var(--destructive)]",
     sign: "-",
   },
 };

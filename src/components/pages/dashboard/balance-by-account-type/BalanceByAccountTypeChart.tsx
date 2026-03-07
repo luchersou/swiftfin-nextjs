@@ -30,7 +30,7 @@ export function BalanceByAccountChart({
       <CardHeader>
         <CardTitle>Your Top Accounts</CardTitle>
       </CardHeader>
-      <CardContent className="h-[350px] ">
+      <CardContent className="h-[350px]">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
@@ -38,7 +38,7 @@ export function BalanceByAccountChart({
           >
             <CartesianGrid
               strokeDasharray="3 3"
-              stroke="hsl(var(--chart-grid))"
+              stroke="var(--chart-grid)"
               vertical={false}
             />
 
@@ -58,15 +58,13 @@ export function BalanceByAccountChart({
 
             <Tooltip
               cursor={false}
-              content={
-                <ChartTooltip currency={currency} />
-              }
+              content={<ChartTooltip currency={currency} />}
             />
 
             <Bar
               dataKey="balance"
               radius={[6, 6, 6, 6]}
-              fill="hsl(var(--chart-bar))"
+              fill="var(--chart-bar)"
               barSize={100}
             />
           </BarChart>

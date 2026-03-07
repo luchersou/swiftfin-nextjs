@@ -26,20 +26,9 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       <SidebarProvider>
         <AppSidebar />
         <SidebarInset
-          className="
-            flex flex-col
-            bg-gradient-to-br
-            from-[oklch(var(--dashboard-bg-start))]
-            to-[oklch(var(--dashboard-bg-end))]
-          "
+          className="flex flex-col bg-gradient-to-br from-[var(--dashboard-bg-start)] to-[var(--dashboard-bg-end)] grain-overlay"
         >
-          <header
-            className="
-              flex h-16 pl-4 shrink-0 items-center gap-2
-              border-b border-border
-              bg-background backdrop-blur-xs
-            "
-          >
+          <header className="flex h-16 pl-4 shrink-0 items-center gap-2 border-b border-border bg-background backdrop-blur-xs">
             <SidebarTrigger />
             <ThemeToggle />
           </header>

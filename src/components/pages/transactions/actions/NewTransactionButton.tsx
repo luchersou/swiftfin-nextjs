@@ -20,7 +20,10 @@ export function NewTransactionButton({
 
   return (
     <>
-      <Button onClick={() => setOpen(true)}>
+      <Button 
+        className="bg-[var(--sidebar-primary)] text-[var(--sidebar-primary-foreground)] hover:bg-[var(--sidebar-primary)]/90" 
+        onClick={() => setOpen(true)}
+      >
         <Plus className="mr-2 h-4 w-4" />
         New transaction
       </Button>

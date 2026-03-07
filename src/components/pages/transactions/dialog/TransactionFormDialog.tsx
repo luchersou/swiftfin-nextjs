@@ -38,9 +38,9 @@ export function TransactionFormDialog({
   const isEdit = mode === "edit";
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog open={open} onOpenChange={onOpenChange} >
       <DialogContent 
-        className="max-w-2xl max-h-[90vh] overflow-y-auto" 
+        className="max-w-2xl max-h-[90vh] overflow-y-auto grain-overlay" 
         onInteractOutside={(event) => event.preventDefault()}
       >
         <DialogHeader>

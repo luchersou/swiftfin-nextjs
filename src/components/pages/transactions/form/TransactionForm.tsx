@@ -422,7 +422,7 @@ export function TransactionForm({
           )}
         />
 
-        <Button type="submit" disabled={isPending} className="w-full">
+        <Button type="submit" disabled={isPending} className="w-full bg-[var(--sidebar-primary)] text-[var(--sidebar-primary-foreground)] hover:bg-[var(--sidebar-primary)]/90">
           {isPending
             ? "Saving..."
             : mode === "edit"

@@ -40,7 +40,7 @@ export function ExpenseByCategoryBar({
           >
             <CartesianGrid
               strokeDasharray="3 3"
-              stroke="hsl(var(--chart-grid))"
+              stroke="var(--chart-grid)"
               horizontal={false}
             />
 
@@ -69,7 +69,7 @@ export function ExpenseByCategoryBar({
             <Bar
               dataKey="total"
               radius={[6, 6, 6, 6]}
-              fill="hsl(var(--chart-bar))"
+              fill="var(--chart-bar)"
               barSize={38}
             />
           </BarChart>

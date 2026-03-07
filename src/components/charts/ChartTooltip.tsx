@@ -18,27 +18,32 @@ export function ChartTooltip({
 }: ChartTooltipProps) {
   if (!active || !payload?.length) return null
 
-  const item = payload[0]
-
-  const name =
+  const resolveName = (item: any) =>
     label ??
-    item.name ??
     item.payload?.label ??
     item.payload?.name ??
     item.payload?.type ??
+    item.name ??
     "—"
 
-  const value = item.value
-
   return (
-    <div className="rounded-lg border bg-[hsl(var(--chart-tooltip-bg))] px-3 py-2 shadow-md">
-      <p className="text-xs text-muted-foreground">
-        {name}
-      </p>
-
-      <p className="text-sm font-semibold text-[hsl(var(--chart-tooltip-text))]">
-        {formatCurrency(value, currency)}
-      </p>
+    <div className="rounded-lg border bg-popover px-3 py-2 shadow-md min-w-[120px]">
+      {payload.map((item, i) => (
+        <div key={i} className="flex items-center justify-between gap-3">
+          <div className="flex items-center gap-1.5">
+            <span
+              className="size-2 rounded-full shrink-0"
+              style={{ background: item.color ?? item.fill }}
+            />
+            <p className="text-xs text-muted-foreground">
+              {resolveName(item)}
+            </p>
+          </div>
+          <p className="text-xs font-semibold text-popover-foreground tabular-nums">
+            {formatCurrency(item.value, currency)}
+          </p>
+        </div>
+      ))}
     </div>
   )
 }

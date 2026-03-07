@@ -287,7 +287,7 @@ export const getTransactions = async (
 export const getTransactionsMetadata = cache(async () => {
   const user = await getUser()
 
-  const [total, categorized] = await prisma.$transaction([
+  const [total, categorizedExpenses] = await prisma.$transaction([
     prisma.transaction.count({
       where: { userId: user.userId },
     }),
@@ -295,13 +295,14 @@ export const getTransactionsMetadata = cache(async () => {
       where: {
         userId: user.userId,
         categoryId: { not: null },
+        type: "EXPENSE",
       },
     }),
   ])
 
   return {
     totalTransactions: total,
-    categorizedTransactions: categorized,
+    categorizedExpenses,
   }
 })
 

@@ -17,11 +17,11 @@ export default async function DashboardPage() {
 
   const {
     totalTransactions,
-    categorizedTransactions,
+    categorizedExpenses,
   } = await getTransactionsMetadata()
 
   const hasTransactions = totalTransactions > 0
-  const hasCategories = categorizedTransactions > 0
+  const hasCategorizedExpenses = categorizedExpenses > 0
 
   return (
     <div className="space-y-10">
@@ -56,7 +56,7 @@ export default async function DashboardPage() {
                 <IncomeVsExpenseServer />
               </Suspense>
 
-              {hasCategories && (
+              {hasCategorizedExpenses && (
                 <Suspense fallback={<ChartSkeleton />}>
                   <ExpenseByCategoryServer />
                 </Suspense>

@@ -35,7 +35,6 @@ export function NavUser() {
   const { isMobile } = useSidebar()
   const { user } = useUser()
   const { signOut, openUserProfile } = useClerk()
-  const { setTheme } = useTheme();
 
   if (!user) return null
 
@@ -113,7 +112,6 @@ export function NavUser() {
             <DropdownMenuItem
               onClick={() => {
                 signOut();
-                setTheme("light");
               }}
             >
               <LogOut />
