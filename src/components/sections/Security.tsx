@@ -44,21 +44,29 @@ export function Security() {
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 16, filter: "blur(6px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          className="flex items-center justify-center gap-2 mb-6"
+        >
+          <div className="h-px w-8 bg-emerald-500/60" />
+          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-emerald-600/80">
+            Enterprise-grade security
+          </span>
+          <div className="h-px w-8 bg-emerald-500/60" />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16, filter: "blur(6px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
           className="text-center max-w-3xl mx-auto mb-12 md:mb-16"
         >
-          <Badge variant="secondary" className="mb-4 px-4 py-2 bg-blue-500/10 text-blue-600 hover:bg-blue-500/20 border-0">
-            <Shield className="w-4 h-4 mr-2" />
-            Enterprise-grade security
-          </Badge>
-          
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Your data is safe with us
           </h2>
-          
           <p className="text-base sm:text-lg text-slate-600">
             We take security seriously. Your financial data is protected with the highest standards of encryption and security protocols.
           </p>
