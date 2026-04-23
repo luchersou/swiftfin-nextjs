@@ -117,28 +117,29 @@ export function TechStack() {
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          initial={{ opacity: 0, y: 16, filter: "blur(6px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          className="flex items-center justify-center gap-2 mb-6"
+        >
+          <div className="h-px w-8 bg-emerald-500/60" />
+          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-emerald-400/80">
+            Enterprise-grade technology
+          </span>
+          <div className="h-px w-8 bg-emerald-500/60" />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16, filter: "blur(6px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
           className="text-center max-w-3xl mx-auto mb-16 md:mb-20"
         >
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <Badge variant="outline" className="mb-6 px-5 py-2.5 bg-gradient-to-r from-slate-800/80 to-slate-800/40 backdrop-blur-xl text-slate-200 hover:from-slate-800 hover:to-slate-800/60 border-slate-700/50 shadow-lg shadow-blue-500/10">
-              <Sparkles className="w-4 h-4 mr-2 text-blue-400" />
-              Enterprise-Grade Technology
-            </Badge>
-          </motion.div>
-          
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Engineered with the best tools
           </h2>
-          
           <p className="text-base sm:text-lg md:text-xl text-slate-400 leading-relaxed">
             Every line of code is crafted using cutting-edge technologies trusted by industry leaders worldwide.
           </p>
