@@ -57,12 +57,13 @@ export function KeyFeatures() {
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="flex items-center gap-2 mb-6"
+          className="flex items-center justify-center gap-2 mb-6"
         >
           <div className="h-px w-8 bg-emerald-500/60" />
           <span className="text-xs font-semibold tracking-[0.2em] uppercase text-emerald-400/80">
             Platform capabilities
           </span>
+          <div className="h-px w-8 bg-emerald-500/60" />
         </motion.div>
 
         {/* Heading */}
