@@ -40,16 +40,30 @@ export function HowItWorks() {
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 16, filter: "blur(6px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          className="flex items-center justify-center gap-2 mb-6"
+        >
+          <div className="h-px w-8 bg-emerald-500/60" />
+          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-emerald-600/80">
+            How it works
+          </span>
+          <div className="h-px w-8 bg-emerald-500/60" />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16, filter: "blur(6px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
           className="text-center max-w-2xl mx-auto mb-14"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-black">
-            How it works
+          <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900">
+            A simple flow for total financial clarity
           </h2>
-          <p className="mt-4 text-muted-foreground">
+          <p className="mt-4 text-zinc-500">
             A simple flow designed to give you clarity and control over your finances.
           </p>
         </motion.div>

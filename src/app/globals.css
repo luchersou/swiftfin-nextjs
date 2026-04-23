@@ -218,7 +218,6 @@
   }
 }
 
-/* ✅ grain-overlay — cria estrutura visual própria */
 @layer components {
   .grain-overlay {
     position: relative;
@@ -245,12 +244,9 @@
   }
 }
 
-/* ✅ account-card-transition — valor único, sem estrutura */
 @layer utilities {
   .account-card-transition {
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
-
-
 
