@@ -242,6 +242,31 @@
     opacity: 0.055;
     mix-blend-mode: soft-light;
   }
+
+  .grid-dark {
+    @apply absolute inset-0;
+    background-size: 28px 28px;
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+  }
+
+  .grid-light {
+    @apply absolute inset-0;
+    background-size: 28px 28px;
+    background-image:
+      linear-gradient(to right, rgb(0 0 0 / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(0 0 0 / 0.04) 1px, transparent 1px);
+  }
+
+  .grid-hero {
+    @apply absolute inset-0;
+    background-size: 32px 32px;
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+    mask-image: radial-gradient(ellipse 80% 50% at 50% 50%, #000, transparent);
+  }
 }
 
 @layer utilities {
