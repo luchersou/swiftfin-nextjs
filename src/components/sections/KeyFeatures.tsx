@@ -23,21 +23,12 @@ const containerVariants = {
 
 export function KeyFeatures() {
   return (
-    <section className="relative w-full px-6 py-28 lg:px-24 bg-slate-950 overflow-hidden">
+    <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
 
-      {/* Grid pattern */}
       <div className="grid-dark" />
 
-      {/* Corner vignettes */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute top-0 left-0 w-[40%] h-[40%] bg-radial-[at_0%_0%] from-slate-950 to-transparent" />
-        <div className="absolute top-0 right-0 w-[40%] h-[40%] bg-radial-[at_100%_0%] from-slate-950 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-[40%] h-[40%] bg-radial-[at_0%_100%] from-slate-950 to-transparent" />
-        <div className="absolute bottom-0 right-0 w-[40%] h-[40%] bg-radial-[at_100%_100%] from-slate-950 to-transparent" />
-      </div>
-
-      {/* Subtle emerald glow behind heading */}
-      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-emerald-500/5 blur-[80px] rounded-full" />
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-stone-500/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '4s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-slate-500/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '4s' }} />
 
       <motion.div
         className="relative z-20 mx-auto max-w-6xl"
