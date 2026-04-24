@@ -7,9 +7,9 @@ import { motion } from "framer-motion"
 const steps = [
   {
     icon: Wallet,
-    title: "Add your transactions",
+    title: "Add your accounts & transactions",
     description:
-      "Quickly register income and expenses with smart categorization.",
+      "Create accounts in USD or EUR, then log income and expenses with categories to keep everything organized.",
     gradient: "from-blue-500/20 to-blue-600/20",
     iconColor: "text-blue-500",
   },
@@ -17,7 +17,7 @@ const steps = [
     icon: LineChart,
     title: "Track your finances",
     description:
-      "Visualize your cash flow, balances, and trends in real time.",
+      "See all your accounts, balances, and transaction history in one place — updated in real time.",
     gradient: "from-purple-500/20 to-purple-600/20",
     iconColor: "text-purple-500",
   },
@@ -25,7 +25,7 @@ const steps = [
     icon: Sparkles,
     title: "Get smart insights",
     description:
-      "Understand your spending patterns and make better decisions.",
+      "Your dashboard breaks down spending by category so you always know where your money is going.",
     gradient: "from-emerald-500/20 to-emerald-600/20",
     iconColor: "text-emerald-500",
   },
