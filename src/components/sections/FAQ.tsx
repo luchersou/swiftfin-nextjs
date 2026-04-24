@@ -41,7 +41,7 @@ export function FAQ() {
     <section className="relative w-full px-6 py-28 lg:px-24 bg-white overflow-hidden">
 
       {/* Grid pattern */}
-      <div className="absolute inset-0 [background-size:28px_28px] [background-image:linear-gradient(to_right,rgb(0_0_0/0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgb(0_0_0/0.04)_1px,transparent_1px)]" />
+      <div className="grid-light" />
 
       {/* Corner vignettes */}
       <div className="pointer-events-none absolute inset-0">

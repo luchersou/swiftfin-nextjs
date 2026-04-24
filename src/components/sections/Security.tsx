@@ -40,7 +40,7 @@ const certifications = [
 export function Security() {
   return (
     <section className="relative py-16 md:py-24 overflow-hidden bg-slate-50">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:20px_20px]" />
+      <div className="grid-light" />
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div

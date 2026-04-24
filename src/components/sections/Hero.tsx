@@ -12,9 +12,8 @@ import { HeroCards } from "./HeroCards";
 export const Hero = () => {
   return (
     <div className="relative w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 sm:px-8 lg:px-12 xl:px-24 py-12 lg:py-0 overflow-hidden bg-gradient-to-br from-slate-950 via-slate-500 to-slate-700">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]" />
-      </div>
+      <div className="grid-light" />
+      
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
           className="

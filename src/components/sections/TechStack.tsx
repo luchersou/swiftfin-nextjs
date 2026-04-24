@@ -111,7 +111,7 @@ export function TechStack() {
   return (
     <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       
-      <div className="absolute inset-0 [background-size:28px_28px] [background-image:linear-gradient(to_right,rgb(255_255_255/0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.01)_1px,transparent_1px)]" />
+      <div className="grid-dark" />
 
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '4s' }} />
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-stone-500/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '4s' }} />

@@ -21,17 +21,12 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 24, filter: "blur(6px)" },
-  visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.6, ease: "easeOut" } },
-};
-
 export function KeyFeatures() {
   return (
     <section className="relative w-full px-6 py-28 lg:px-24 bg-slate-950 overflow-hidden">
 
       {/* Grid pattern */}
-      <div className="absolute inset-0 [background-size:28px_28px] [background-image:linear-gradient(to_right,rgb(255_255_255/0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.01)_1px,transparent_1px)]" />
+      <div className="grid-dark" />
 
       {/* Corner vignettes */}
       <div className="pointer-events-none absolute inset-0">
