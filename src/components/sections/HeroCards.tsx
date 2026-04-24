@@ -35,7 +35,7 @@ function RevenueCard() {
   return (
     <motion.div
       initial={{ opacity: 0, x: 50, rotate: -12 }}
-      animate={{ opacity: 1, x: 0, rotate: -6 }}
+      animate={{ opacity: 1, x: 0, rotate: -6, }}
       transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
       className="absolute left-0 top-[15%] rotate-[-6deg] z-30 hover:z-50 transition-all hover:scale-105"
     >
