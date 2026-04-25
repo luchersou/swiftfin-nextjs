@@ -1,5 +1,6 @@
 "use client"
 
+import { Currency } from "@prisma/client"
 import {
   BarChart,
   Bar,
@@ -10,11 +11,10 @@ import {
   CartesianGrid,
 } from "recharts"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { BalanceByAccount } from "@/types/dashboard"
-import { formatCurrency } from "@/lib/utils"
-import { Currency } from "@prisma/client"
 import { ChartTooltip } from "@/components/charts/ChartTooltip"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { formatCurrency } from "@/lib/utils"
+import { BalanceByAccount } from "@/types/dashboard"
 
 type BalanceByAccountChartProps = {
   data: BalanceByAccount[]

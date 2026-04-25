@@ -1,5 +1,5 @@
-import { z } from "zod";
 import { TransactionType } from "@prisma/client";
+import { z } from "zod";
 
 const AMOUNT_REGEX = /^-?\d+(\.\d{1,2})?$/
 

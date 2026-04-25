@@ -1,7 +1,9 @@
+import { ReactNode } from "react";
+
+import Link from "next/link";
+
 import { LogoDefault } from "@/components/layout/LogoDefault";
 import { cn } from "@/lib/utils";
-import { ReactNode } from "react";
-import Link from "next/link";
 
 type AuthLayoutProps = {
   children: ReactNode;

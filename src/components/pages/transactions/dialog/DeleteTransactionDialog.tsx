@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+
 import { toast } from "sonner";
 
+import { deleteTransaction } from "@/actions/transactions";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -14,7 +16,6 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 
-import { deleteTransaction } from "@/actions/transactions";
 
 interface DeleteTransactionDialogProps {
   open: boolean;

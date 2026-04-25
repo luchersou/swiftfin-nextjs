@@ -1,7 +1,8 @@
 "use client"
 
-import { formatCurrency } from "@/lib/utils"
 import { Currency } from "@prisma/client"
+
+import { formatCurrency } from "@/lib/utils"
 
 type ChartTooltipProps = {
   active?: boolean

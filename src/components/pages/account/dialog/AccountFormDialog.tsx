@@ -7,9 +7,9 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { AccountFormValues } from "@/lib/schemas/account";
 
 import { AccountForm } from "../form/AccountForm";
-import { AccountFormValues } from "@/lib/schemas/account";
 
 type AccountDialogProps = {
   open: boolean;

@@ -1,10 +1,13 @@
 import { Suspense } from "react";
+
 import { TransactionType } from "@prisma/client";
-import { TransactionFilters } from "@/types/transactions";
+import { Metadata } from "next";
 
 import { TransactionsSectionServer } from "@/components/pages/transactions/TransactionsSection.server";
 import { TransactionsPageSkeleton } from "@/components/skeletons/TransactionsPageSkeleton";
-import { Metadata } from "next";
+import { TransactionFilters } from "@/types/transactions";
+
+
 
 export const metadata: Metadata = {
   title: "Transactions",

@@ -1,7 +1,5 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { motion } from "framer-motion";
 import {
   BarChart3,
@@ -18,6 +16,9 @@ import {
   Cloud,
   Sparkles,
 } from "lucide-react";
+
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { cn } from "@/lib/utils";
 
 interface HeroCardsProps {
   className?: string;

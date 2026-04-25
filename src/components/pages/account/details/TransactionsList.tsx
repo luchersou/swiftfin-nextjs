@@ -1,7 +1,9 @@
-import { TransactionListItem } from "@/types/account";
-import { AccountTransactionRow } from "./TransactionRow";
 import { Currency } from "@prisma/client";
 import { Receipt } from "lucide-react";
+
+import { TransactionListItem } from "@/types/account";
+
+import { AccountTransactionRow } from "./TransactionRow";
 
 type AccountTransactionsListProps = {
   transactions: TransactionListItem[];

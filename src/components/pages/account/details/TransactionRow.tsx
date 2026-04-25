@@ -1,8 +1,10 @@
-import { TransactionListItem } from "@/types/account";
+import { Currency } from "@prisma/client";
+import { format } from "date-fns";
+
 import { Badge } from "@/components/ui/badge";
 import { formatCurrency } from "@/lib/utils";
-import { format } from "date-fns";
-import { Currency } from "@prisma/client";
+import { TransactionListItem } from "@/types/account";
+
 
 type AccountTransactionRowProps = {
   transaction: TransactionListItem;

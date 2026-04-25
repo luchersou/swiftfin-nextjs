@@ -1,7 +1,9 @@
 import { Suspense } from "react";
+
+import { Metadata } from "next";
+
 import { AccountDetailsContent } from "@/components/pages/account/details/AccountDetailsContent.server";
 import { AccountDetailsSkeleton } from "@/components/skeletons/AccountDetailsSkeleton";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Account Details",

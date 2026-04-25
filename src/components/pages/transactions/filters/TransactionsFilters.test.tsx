@@ -1,6 +1,8 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import { TransactionsFilters } from "./TransactionsFilters";
 import { useRouter, useSearchParams } from "next/navigation";
+
+import { render, screen, fireEvent } from "@testing-library/react";
+
+import { TransactionsFilters } from "./TransactionsFilters";
 
 // --------------------------------------------------
 // Mocks

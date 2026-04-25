@@ -1,13 +1,14 @@
 "use client";
 
-import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 import {
   TrendingUp,
   Shield,
   Zap,
 } from "lucide-react";
+
 import { HeroCards } from "./HeroCards";
+import { Button } from "../ui/button";
 
 export const Hero = () => {
   return (

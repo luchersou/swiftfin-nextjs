@@ -1,5 +1,8 @@
 "use client";
 
+import Link from "next/link";
+
+import { motion } from "framer-motion";
 import {
   Shield,
   Zap,
@@ -9,9 +12,9 @@ import {
   Sparkles,
   ArrowRight,
 } from "lucide-react";
-import Link from "next/link";
-import { motion } from "framer-motion";
+
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+
 import { TypewriterEffect } from "../ui/typewriter-effect";
 
 const containerVariants = {

@@ -1,7 +1,9 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import { DeleteTransactionDialog } from "./DeleteTransactionDialog";
-import { deleteTransaction } from "@/actions/transactions";
 import { toast } from "sonner";
+
+import { deleteTransaction } from "@/actions/transactions";
+
+import { DeleteTransactionDialog } from "./DeleteTransactionDialog";
 
 // --------------------
 // Mocks

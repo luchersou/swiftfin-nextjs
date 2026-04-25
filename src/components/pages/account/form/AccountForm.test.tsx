@@ -1,8 +1,10 @@
+import { AccountType, Currency } from '@prisma/client'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { AccountForm } from './AccountForm'
-import { AccountType, Currency } from '@prisma/client'
+
 import { createAccount, updateAccount } from '@/actions/accounts'
+
+import { AccountForm } from './AccountForm'
 
 // --------------------
 // Mocks

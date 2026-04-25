@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+
 import { formatCurrency } from "@/lib/utils";
 import { getAccountDetail } from "@/services/accounts";
 

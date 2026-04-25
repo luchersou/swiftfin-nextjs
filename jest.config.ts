@@ -3,8 +3,9 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type {Config} from 'jest';
 import nextJest from 'next/jest';
+
+import type {Config} from 'jest';
 
 const createJestConfig = nextJest({
   // Caminho para o Next.js app

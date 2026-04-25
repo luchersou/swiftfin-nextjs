@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import { AccountFormDialog } from './AccountFormDialog';
 import { AccountType, Currency } from '@prisma/client';
+import { render, screen } from '@testing-library/react';
+
+import { AccountFormDialog } from './AccountFormDialog';
 
 // --------------------
 // Mocks

@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { DashboardSummary } from "@/types/dashboard"
 import { formatCurrency } from "@/lib/utils"
+import { DashboardSummary } from "@/types/dashboard"
 
 export function DashboardCards({
   summary,

@@ -1,8 +1,8 @@
+import { getUser } from "@/lib/auth/auth";
 import {
   getDashboardSummary,
   getBalanceByAccount,
 } from "@/services/analytics"
-import { getUser } from "@/lib/auth/auth";
 
 import { BalanceByAccountChart } from "./BalanceByAccountTypeChart"
 

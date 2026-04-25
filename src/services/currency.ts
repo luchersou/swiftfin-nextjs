@@ -1,4 +1,5 @@
 import { Currency } from "@prisma/client";
+
 import { prisma } from "@/lib/prisma";
 
 const FALLBACK_RATES: Record<Currency, Record<Currency, number>> = {

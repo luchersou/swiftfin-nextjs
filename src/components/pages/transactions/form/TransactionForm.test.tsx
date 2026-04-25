@@ -1,10 +1,12 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import { TransactionForm } from "./TransactionForm";
+import { toast } from "sonner";
+
 import {
   createTransaction,
   updateTransaction,
 } from "@/actions/transactions";
-import { toast } from "sonner";
+
+import { TransactionForm } from "./TransactionForm";
 
 // --------------------------------------------------
 // Mocks

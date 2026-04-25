@@ -1,13 +1,15 @@
+import { Metadata } from "next";
+import { Toaster } from "sonner";
+
+import { AppSidebar } from "@/components/layout/app-sidebar"
+import { ThemeToggle } from "@/components/theme/theme-toggle"
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
-import { AppSidebar } from "@/components/layout/app-sidebar"
 import { ThemeProvider } from "@/providers/theme-provider"
-import { ThemeToggle } from "@/components/theme/theme-toggle"
-import { Toaster } from "sonner";
-import { Metadata } from "next";
+
 
 export const metadata: Metadata = {
   title: {

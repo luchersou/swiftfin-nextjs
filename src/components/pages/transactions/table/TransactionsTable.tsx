@@ -1,9 +1,5 @@
 "use client";
 
-import { TransactionTableRow } from "@/types/transactions";
-import { TransactionRow } from "./TransactionRow";
-import { TransactionsPagination } from "./TransactionsPagination";
-
 import {
   Table,
   TableBody,
@@ -12,6 +8,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { TransactionTableRow } from "@/types/transactions";
+
+import { TransactionRow } from "./TransactionRow";
+import { TransactionsPagination } from "./TransactionsPagination";
+
 
 type TransactionsTableProps = {
   data: TransactionTableRow[];

@@ -1,11 +1,12 @@
 "use client";
 
-import { TransactionTableRow } from "@/types/transactions";
 import { format } from "date-fns";
-import { Badge } from "@/components/ui/badge";
-import { formatCurrency } from "@/lib/utils";
-import { TableRow, TableCell } from "@/components/ui/table";
+
 import { TransactionActions } from "@/components/pages/transactions/actions/TransactionActions";
+import { Badge } from "@/components/ui/badge";
+import { TableRow, TableCell } from "@/components/ui/table";
+import { formatCurrency } from "@/lib/utils";
+import { TransactionTableRow } from "@/types/transactions";
 
 const TRANSACTION_TYPE_CONFIG = {
   INCOME: {

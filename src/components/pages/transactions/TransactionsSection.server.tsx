@@ -1,10 +1,12 @@
+import { getUser } from "@/lib/auth/auth"
 import { getTransactions } from "@/services/transactions"
+import { TransactionFilters } from "@/types/transactions"
+
+import { NewTransactionButton } from "./actions/NewTransactionButton"
+import { TransactionsFilters } from "./filters/TransactionsFilters"
 import { TransactionsHeader } from "./header/TransactionsHeader"
 import { TransactionsTable } from "./table/TransactionsTable"
-import { TransactionsFilters } from "./filters/TransactionsFilters"
-import { TransactionFilters } from "@/types/transactions"
-import { NewTransactionButton } from "./actions/NewTransactionButton"
-import { getUser } from "@/lib/auth/auth"
+
 
 type TransactionsSectionServerProps = {
   page: number
