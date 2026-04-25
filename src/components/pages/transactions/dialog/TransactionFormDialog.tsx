@@ -1,5 +1,6 @@
 "use client";
 
+import { TransactionForm } from "@/components/pages/transactions/form/TransactionForm";
 import {
   Dialog,
   DialogContent,
@@ -7,8 +8,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-
-import { TransactionForm } from "@/components/pages/transactions/form/TransactionForm";
 import { TransactionFormValues } from "@/lib/schemas/transactions";
 
 interface TransactionFormDialogProps {

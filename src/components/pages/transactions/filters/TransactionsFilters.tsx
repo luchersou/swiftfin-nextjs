@@ -1,5 +1,9 @@
 "use client";
 
+import { useRouter, useSearchParams } from "next/navigation";
+
+import { X } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -8,8 +12,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useRouter, useSearchParams } from "next/navigation";
-import { X } from "lucide-react";
 
 type TransactionsFiltersProps = {
   accounts: Array<{ id: string; name: string }>;

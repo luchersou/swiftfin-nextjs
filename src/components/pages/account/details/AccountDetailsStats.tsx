@@ -1,8 +1,9 @@
-import { AccountStats } from "@/types/account";
-import { Card, CardContent } from "@/components/ui/card";
-import { formatCurrency } from "@/lib/utils";
 import { Currency } from "@prisma/client";
 import { TrendingUp, TrendingDown, Receipt, DollarSign } from "lucide-react";
+
+import { Card, CardContent } from "@/components/ui/card";
+import { formatCurrency } from "@/lib/utils";
+import { AccountStats } from "@/types/account";
 
 type AccountDetailsStatsProps = {
   stats: AccountStats;

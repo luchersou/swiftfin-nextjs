@@ -1,8 +1,8 @@
+import { getUser } from "@/lib/auth/auth";
 import {
   getDashboardSummary,
   getExpenseByCategory,
 } from "@/services/analytics"
-import { getUser } from "@/lib/auth/auth";
 
 import { ExpenseByCategoryBar } from "./ExpenseByCategoryBar"
 

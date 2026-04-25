@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+
 import {
   LayoutDashboard,
   Wallet,
@@ -9,6 +10,7 @@ import {
 
 import { NavMain } from "@/components/layout/app-sidebar/nav-main"
 import { NavUser } from "@/components/layout/app-sidebar/nav-user"
+import { LogoSidebar } from "@/components/layout/LogoSidebar"
 import {
   Sidebar,
   SidebarContent,
@@ -16,7 +18,6 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
-import { LogoSidebar } from "@/components/layout/LogoSidebar"
 
 const data = {
   navMain: [

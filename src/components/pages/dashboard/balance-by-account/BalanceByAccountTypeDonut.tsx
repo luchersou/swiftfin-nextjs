@@ -1,5 +1,6 @@
 "use client"
 
+import { Currency } from "@prisma/client"
 import {
   PieChart,
   Pie,
@@ -8,11 +9,10 @@ import {
   Cell,
 } from "recharts"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { BalanceByAccountType } from "@/types/dashboard"
-import { Currency } from "@prisma/client"
 import { ChartTooltip } from "@/components/charts/ChartTooltip"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { formatCurrency } from "@/lib/utils"
+import { BalanceByAccountType } from "@/types/dashboard"
 
 type BalanceByAccountTypeDonutProps = {
   data: BalanceByAccountType[]

@@ -1,8 +1,10 @@
-import { prisma } from "@/lib/prisma";
-import type { UserJSON, WebhookEvent } from "@clerk/nextjs/server";
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
+
+import type { UserJSON, WebhookEvent } from "@clerk/nextjs/server";
 import { Webhook } from "svix";
+
+import { prisma } from "@/lib/prisma";
 
 const SIGNING_SECRET = process.env.CLERK_WEBHOOK_SECRET;
 

@@ -1,10 +1,15 @@
 "use client";
 
-import { AccountTreeNode } from "@/types/account";
-import { cn, formatCurrency } from "@/lib/utils";
-import { AccountActions } from "./AccountListActions";
-import { ChevronRight, Wallet } from "lucide-react";
 import Link from "next/link";
+
+import { ChevronRight, Wallet } from "lucide-react";
+
+import { cn, formatCurrency } from "@/lib/utils";
+import { AccountTreeNode } from "@/types/account";
+
+import { AccountActions } from "./AccountListActions";
+
+
 
 type AccountRowProps = {
   account: AccountTreeNode;

@@ -1,6 +1,6 @@
-import { AccountDetail } from "@/types/account";
 import { Badge } from "@/components/ui/badge";
 import { Breadcrumbs } from "@/components/ui/breadcrumb";
+import { AccountDetail } from "@/types/account";
 
 export function AccountDetailsHeader({ account }: { account: AccountDetail }) {
   return (

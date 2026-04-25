@@ -1,8 +1,9 @@
 "use server";
 
-import { CreateCategorySchema, CreateCategoryInput } from "@/lib/schemas/category";
 import { revalidatePath } from "next/cache";
+
 import { getUser } from "@/lib/auth/auth";
+import { CreateCategorySchema, CreateCategoryInput } from "@/lib/schemas/category";
 import { createCategoryService, deleteCategoryService } from "@/services/categories";
 
 export async function createCategory(input: CreateCategoryInput) {

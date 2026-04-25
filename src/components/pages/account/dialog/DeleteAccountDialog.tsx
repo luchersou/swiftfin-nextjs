@@ -1,7 +1,11 @@
 "use client";
 
 import { useTransition } from "react";
+
 import { Trash2 } from "lucide-react";
+import { toast } from "sonner";
+
+import { deleteAccount } from "@/actions/accounts";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -13,15 +17,13 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { Button } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Button } from "@/components/ui/button";
-import { deleteAccount } from "@/actions/accounts";
-import { toast } from "sonner";
 
 type DeleteAccountDialogProps = {
   accountId: string;

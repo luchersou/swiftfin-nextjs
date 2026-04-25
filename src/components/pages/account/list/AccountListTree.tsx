@@ -1,6 +1,7 @@
 "use client";
 
 import { AccountTreeNode } from "@/types/account";
+
 import { AccountRow } from "./AccountListRow";
 
 type AccountTreeProps = {

@@ -1,7 +1,8 @@
 "use server";
 
-import { prisma } from "@/lib/prisma";
 import { auth, clerkClient } from "@clerk/nextjs/server";
+
+import { prisma } from "@/lib/prisma";
 
 type FilledUser = {
   user: NonNullable<Awaited<ReturnType<typeof prisma.user.findUnique>>>;

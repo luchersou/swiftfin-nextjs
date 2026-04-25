@@ -1,10 +1,10 @@
 import { Suspense } from "react"
 
+import { DashboardCardsServer } from "@/components/pages/dashboard/dashboard-cards/DashboardCards.server"
+import { DashboardChartsServer } from "@/components/pages/dashboard/dashboard-charts/DashboardCharts.server"
 import { CardSkeleton } from "@/components/skeletons/CardSkeleton"
 import { ChartSkeleton } from "@/components/skeletons/ChartSkeleton"
 
-import { DashboardCardsServer } from "@/components/pages/dashboard/dashboard-cards/DashboardCards.server"
-import { DashboardChartsServer } from "@/components/pages/dashboard/dashboard-charts/DashboardCharts.server"
 
 export default function DashboardPage() {
   return (

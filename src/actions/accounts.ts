@@ -2,15 +2,13 @@
 
 import { revalidatePath } from "next/cache";
 
+import { getUser } from "@/lib/auth/auth";
 import {
   createAccountSchema,
   CreateAccountInput,
   updateAccountSchema,
   UpdateAccountInput,
 } from "@/lib/schemas/account";
-
-import { getUser } from "@/lib/auth/auth";
-
 import { 
   createAccountService,
   updateAccountService,

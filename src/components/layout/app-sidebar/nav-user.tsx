@@ -1,5 +1,6 @@
 "use client"
 
+import { useClerk, useUser } from "@clerk/nextjs"
 import {
   Bell,
   ChevronsUpDown,
@@ -8,7 +9,6 @@ import {
 } from "lucide-react"
 import { useTheme } from "next-themes";
 
-import { useClerk, useUser } from "@clerk/nextjs"
 
 import {
   Avatar,

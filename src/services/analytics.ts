@@ -1,6 +1,6 @@
-import { prisma } from "@/lib/prisma";
 import { TransactionType, Currency, AccountType } from "@prisma/client";
-import { convertCurrency } from "./currency";
+
+import { prisma } from "@/lib/prisma";
 import type { 
     DashboardSummary, 
     ExpenseByCategory, 
@@ -8,6 +8,9 @@ import type {
     BalanceByAccountType, 
     BalanceByAccount, 
 } from "@/types/dashboard";
+
+import { convertCurrency } from "./currency";
+
 
 const TOP_ACCOUNTS_LIMIT = 3;
 

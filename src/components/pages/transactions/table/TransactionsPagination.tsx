@@ -1,6 +1,9 @@
 "use client";
 
 import React from "react";
+
+import { useRouter, useSearchParams } from "next/navigation";
+
 import {
   Pagination,
   PaginationContent,
@@ -9,7 +12,6 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { useRouter, useSearchParams } from "next/navigation";
 
 type TransactionsPaginationProps = {
   page: number;

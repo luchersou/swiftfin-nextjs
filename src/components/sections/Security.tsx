@@ -2,9 +2,10 @@
 
 import { motion } from "framer-motion"
 import { Shield, Lock, Eye, Fingerprint, Server, CheckCircle2 } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
+
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 
 const securityFeatures = [

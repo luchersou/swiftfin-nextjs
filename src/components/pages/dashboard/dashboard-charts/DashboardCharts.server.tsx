@@ -1,12 +1,11 @@
 import { Suspense } from "react"
 
-import { ChartSkeleton } from "@/components/skeletons/ChartSkeleton"
 
-import { IncomeVsExpenseServer } from "@/components/pages/dashboard/income-vs-expense/IncomeVsExpense.server"
-import { ExpenseByCategoryServer } from "@/components/pages/dashboard/expense-by-category/ExpenseByCategory.server"
 import { BalanceByAccountTypeServer } from "@/components/pages/dashboard/balance-by-account/BalanceByAccount.server"
 import { BalanceByAccountServer } from "@/components/pages/dashboard/balance-by-account-type/BalanceByAccountType.server"
-
+import { ExpenseByCategoryServer } from "@/components/pages/dashboard/expense-by-category/ExpenseByCategory.server"
+import { IncomeVsExpenseServer } from "@/components/pages/dashboard/income-vs-expense/IncomeVsExpense.server"
+import { ChartSkeleton } from "@/components/skeletons/ChartSkeleton"
 import { getAccountsCount } from "@/services/accounts"
 import { getTransactionsMetadata } from "@/services/transactions"
 

@@ -1,5 +1,6 @@
 "use client"
 
+import { Currency } from "@prisma/client"
 import {
   BarChart,
   Bar,
@@ -11,11 +12,10 @@ import {
   Cell,
 } from "recharts"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { IncomeVsExpense } from "@/types/dashboard"
-import { formatCurrency } from "@/lib/utils"
-import { Currency } from "@prisma/client"
 import { ChartTooltip } from "@/components/charts/ChartTooltip"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { formatCurrency } from "@/lib/utils"
+import { IncomeVsExpense } from "@/types/dashboard"
 
 type IncomeVsExpenseBarProps = {
   data: IncomeVsExpense

@@ -1,9 +1,10 @@
+import { getUser } from "@/lib/auth/auth";
 import {
   getDashboardSummary,
   getIncomeVsExpense,
 } from "@/services/analytics"
+
 import { IncomeVsExpenseBar } from "./IncomeVsExpenseBar"
-import { getUser } from "@/lib/auth/auth";
 
 
 export async function IncomeVsExpenseServer() {

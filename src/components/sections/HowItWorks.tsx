@@ -1,8 +1,9 @@
 "use client"
 
-import { Card, CardContent } from "@/components/ui/card"
-import { Wallet, LineChart, Sparkles } from "lucide-react"
 import { motion } from "framer-motion"
+import { Wallet, LineChart, Sparkles } from "lucide-react"
+
+import { Card, CardContent } from "@/components/ui/card"
 
 const steps = [
   {

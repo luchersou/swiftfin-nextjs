@@ -1,5 +1,5 @@
-import { z } from "zod";
 import { AccountType, Currency } from "@prisma/client";
+import { z } from "zod";
 
 const INITIAL_BALANCE_REGEX = /^-?\d+(\.\d{1,2})?$/;
 
