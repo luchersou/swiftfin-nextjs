@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ClerkProvider } from '@clerk/nextjs'
 import "./globals.css";
 
-const nunito = Nunito({
+const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
 });
@@ -32,7 +32,7 @@ export default function RootLayout({
       }}
       >
       <html lang="en" suppressHydrationWarning>
-        <body className={cn(nunito.variable, "antialiased font-sans")}>
+        <body className={cn(inter.variable, "antialiased font-sans")}>
           {children}
         </body>
       </html>
